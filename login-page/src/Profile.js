@@ -44,7 +44,7 @@ const Profile = () => {
 
   const handleNameChange = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/profile/', {
+      const res = await fetch('https://vdart-proj-r05z.onrender.com', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const Profile = () => {
 
   const handleEmailChange = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/profile/', {
+      const res = await fetch('https://vdart-proj-r05z.onrender.com', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const Profile = () => {
 
   const handlePasswordChange = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/change-password/', {
+      const res = await fetch('https://vdart-proj-r05z.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
