@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+.light .dashboard {
+  background-color: white;
+  color: black;
+}
+
+.dark .dashboard {
+  background-color: #121212;
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Left side with diagonal overlay */
+.login-left {
+  flex: 1;
+  position: relative;
+  background: url('https://source.unsplash.com/800x800/?technology,abstract') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login-left::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(15,23,42,0.75) 0%, rgba(59,130,246,0.4) 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+  z-index: 1;
+}
+
+.login-hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #e0e7ff;
+  max-width: 300px;
+}
+
+.login-hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+}
+
+.login-hero-text p {
+  font-size: 1.2rem;
+  color: #cbd5e1cc;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Glassmorphism Login Container */
+.login-container {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.25);
+  color: #f0f4ffdd;
+  max-width: 450px;
+}
+
+.login-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  align-self: center;
+}
+
+/* Floating label form groups */
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2.2rem;
+}
+
+label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: #94a3b8;
+  font-weight: 600;
+  pointer-events: none;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  background: transparent;
+  padding: 0 5px;
+}
+
+/* Input styling */
+input {
+  width: 100%;
+  padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #f0f4ffdd;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+/* Move label up when input focused or filled */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -12px;
+  left: 14px;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 4px;
+}
+
+/* Focus input border color */
+input:focus {
+  border-color: #3b82f6;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+
+  .login-left {
+    height: 35vh;
+  }
+
+  .login-container {
+    height: 65vh;
+    padding: 2rem 2.5rem;
+    max-width: 100%;
+  }
+}

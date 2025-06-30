@@ -1,0 +1,121 @@
+/* dashboard.css */
+
+/* Light mode styles */
+.light .dashboard-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  margin: 0;
+  color: black;
+}
+
+.light .dashboard-header {
+  background-color: #1f2937;
+  color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.light .dashboard-header button {
+  background-color: #ef4444;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.light .dashboard-header button:hover {
+  background-color: #dc2626;
+}
+
+.light .dashboard-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Glassmorphism for light mode card */
+.light .dashboard-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem 3rem;
+  text-align: center;
+  max-width: 500px;
+  color: black;
+}
+
+.light .username {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Dark mode styles */
+.dark .dashboard-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  min-height: 100vh;
+  margin: 0;
+  color: #e5e7eb;
+}
+
+.dark .dashboard-header {
+  background-color: #222222;
+  color: #f9fafb;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .dashboard-header button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dark .dashboard-header button:hover {
+  background-color: #dc2626;
+}
+
+.dark .dashboard-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Glassmorphism for dark mode card */
+.dark .dashboard-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 2rem 3rem;
+  text-align: center;
+  max-width: 500px;
+  color: #d1d5db;
+}
+
+.dark .username {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.light .dashboard-card{
+  color: #121212;
+}
