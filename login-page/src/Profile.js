@@ -16,7 +16,7 @@ const Profile = () => {
 
     async function fetchProfile() {
       try {
-        const res = await fetch('http://localhost:8000/api/profile/', {
+        const res = await fetch('https://vdart-proj-r05z.onrender.com', {
           headers: { Authorization: `Bearer ${token}` },
         });
 
