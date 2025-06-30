@@ -19,7 +19,7 @@ const SignUp = () => {
     const last_name = nameParts.slice(1).join(' ') || '';
 
     try {
-      const res = await axios.post('http://localhost:8000/api/register/', {
+      const res = await axios.post('https://vdart-proj-r05z.onrender.com', {
         username,
         email,
         password1,
