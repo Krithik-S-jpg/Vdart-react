@@ -40,7 +40,7 @@ const Dashboard = () => {
   async function fetchActiveUsers() {
     if (!token) return;
     try {
-      const res = await fetch('https://vdart-proj-r05z.onrender.com', {
+      const res = await fetch('https://vdart-proj-r05z.onrender.com/api/active-users/', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) {
