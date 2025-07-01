@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://vdart-proj-r05z.onrender.com', {
+      const response = await axios.post('https://vdart-proj-r05z.onrender.com/api/token/', {
         username,
         password,
       });
